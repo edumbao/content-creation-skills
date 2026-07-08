@@ -1,0 +1,15 @@
+{
+  "name": "blotato-skills",
+  "owner": {
+    "name": "Blotato",
+    "email": "support@blotato.com"
+  },
+  "description": "Blotato's free Claude skills.",
+  "plugins": [
+    {
+      "name": "blotato",
+      "source": "./blotato",
+      "description": "Blank page to scheduled social post in one conversation. 7 skills, one namespace."
+    }
+  ]
+}
