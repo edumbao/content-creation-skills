@@ -173,26 +173,42 @@ Blotato can only post to platforms you connect. Connect each platform you want t
 
 You don't have to connect every platform on day one. Start with 1-2.
 
-### Part 3: Install the Blotato MCP server in Claude (5 minutes)
+### Part 3: Connect Blotato to Claude (5 minutes)
 
-The MCP server is what lets Claude talk to Blotato. Install it once.
+The Blotato MCP server is what lets Claude talk to Blotato. It runs remotely — no install, no config files. You connect it once.
 
-**For Claude Desktop:**
-1. Open Claude Desktop → Settings → Developer → Edit Config.
-2. Add the Blotato MCP server config. Find the exact config block at **https://blotato.com/docs/mcp** (or search "Blotato MCP" in their docs).
-3. Save the config and **fully quit and relaunch Claude Desktop** (close all windows first).
+**Prerequisite**: MCP access needs a paid Blotato plan and at least one connected social account (Part 2).
 
-**For Claude Code:**
-1. Run the install command from Blotato's docs: **https://blotato.com/docs/mcp**
-2. The command will look something like `claude mcp add blotato ...`. Copy it from their docs.
-3. Once installed, run `claude` to start a new session.
+**For Claude.ai Web, Claude Desktop, or Claude Cowork (OAuth — easiest):**
+1. In the left sidebar, click **Customize** > **Connectors**.
+2. Click the **+** button > **Add custom connector**.
+3. Name: `Blotato`
+4. URL: `https://mcp.blotato.com/mcp`
+5. Click **Connect** and approve access.
 
-**If the MCP install steps look outdated**: Blotato's docs at **https://blotato.com/docs/mcp** are the source of truth. If anything below conflicts with their docs, follow their docs.
+You must be logged into your Blotato account in the same browser to finish the OAuth approval.
 
-### Part 4: Sign in to Blotato from Claude (1 minute)
+**For Claude Code (Terminal):**
+1. Start a Claude Code session.
+2. Paste this command:
+   ```bash
+   claude mcp add --transport http Blotato https://mcp.blotato.com/mcp
+   ```
+3. Run `/mcp`, select `Blotato > Authenticate`, and approve access.
+4. Restart Claude Code.
 
-1. Re-run this skill (e.g., type `/post-scheduler` or just ask Claude to schedule a post).
-2. Claude will hit a Blotato MCP tool the first time. The MCP will open a browser tab asking you to sign in to Blotato (OAuth flow).
+**For Cursor, Antigravity, Codex, and other API-key clients:**
+1. Grab your API key from [Settings > API](https://my.blotato.com/settings/api).
+2. Follow the "Other MCP Clients" steps in the setup guide (link below).
+
+Full setup guide with screenshots and troubleshooting: **https://help.blotato.com/api/mcp/setup**
+
+### Part 4: Authorize on first use (1 minute)
+
+If you approved access during Part 3, you're already authorized — skip to scheduling. If you skipped that approval, the first Blotato tool call triggers sign-in:
+
+1. Ask Claude to schedule a post (or type `/post-scheduler`).
+2. The first Blotato MCP tool call opens a browser tab asking you to sign in to Blotato (OAuth flow).
 3. Sign in with the same account from Part 1. Approve.
 4. The browser tab will say "you can close this window now." Go back to Claude. The MCP is now authorized.
 
