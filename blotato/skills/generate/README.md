@@ -2,8 +2,6 @@
 
 A Claude skill that makes faceless video content cheaply: draft a still on a cheap image model, then animate the one you approve through kie.ai. Quotes the cost before any paid video, enforces a 1080p publishable floor, and files every output plus its prompt in one flat folder.
 
-Adapted from RoboNuggets' /generate build guide. Shout out @robonuggets. This is our own build, not his gated community skill.
-
 ## Install
 
 1. Drop the `generate/` folder into `.claude/skills/` in your Claude Code workspace.
@@ -15,9 +13,7 @@ Adapted from RoboNuggets' /generate build guide. Shout out @robonuggets. This is
 - Step 1, draft the still: cheap image model (Nano Banana 2, or GPT Image 2 if there is text or an app UI in frame). You review before anything is animated. The final still is 1080x1920, because the clip inherits the still's dimensions.
 - Step 2, animate: the approved still goes to Seedance 1.0 Pro image-to-video on kie.ai at 1080p. The skill quotes the credit and dollar cost and waits for your go. Then it polls, downloads the mp4, and logs the prompt and the real cost.
 
-## What we added over the base guide
-
-Three improvements on RoboNuggets' /generate skill:
+## What makes this build useful
 
 1. A running budget ceiling. A cost ledger at `<generations>/ledger.json`, plus a session cap and a monthly cap the skill refuses to cross. Every cost quote shows what you have spent and what is left. Both spend caps are defaults. Edit them in SKILL.md.
 2. Reusable presets (`presets/`). Save a format, a character, your app watermark, and your brand look once, and every clip in the series stays consistent. Ships with `pov`, `before-after`, `problem-solution`, `story`, `listicle`, `app-watermark`, and `brand-style` to edit.

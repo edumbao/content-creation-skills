@@ -8,7 +8,7 @@ allowed-tools: Read, Write, Edit, Bash, Glob
 
 Make faceless video content for pennies, keep a channel visually consistent, and never blow the budget. Draft a cheap still, check it before you spend on animation, then animate only the still you approve. Output lands publish-ready.
 
-Built for vertical social video (9:16). Adapted from RoboNuggets' /generate build guide (shout out @robonuggets). We extended it in 3 ways: a running budget ceiling, reusable presets, and a quality gate plus a Blotato publish hand-off.
+Built for vertical social video (9:16), with a running budget ceiling, reusable presets, and a quality gate plus a Blotato publish hand-off.
 
 ## Models
 
