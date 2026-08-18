@@ -12,7 +12,7 @@ Run these two commands in Claude Code:
 /plugin install blotato@blotato-skills
 ```
 
-Then type `/blotato` to surface all 7 skills. To update later, run `/plugin update`.
+Then type `/blotato` to surface all 8 skills. To update later, run `/plugin update`.
 
 ## What's inside
 
@@ -25,6 +25,7 @@ Then type `/blotato` to surface all 7 skills. To update later, run `/plugin upda
 | post-scheduler | "Schedule this to LinkedIn". Ships the post via Blotato. |
 | repurpose | "Turn this blog post into a week of content". |
 | viral-hooks | A library of 100 proven hook frameworks that opens every post. |
+| generate | "Make me a faceless AI video". Drafts a still, checks quality and budget, animates through kie.ai, then hands off to Blotato. |
 
 Full docs: https://help.blotato.com/claude-skills
 
