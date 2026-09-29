@@ -1,7 +1,6 @@
-# Blotato Free Claude Skills
+# Content Creation Skills
 
-Free Claude skills that take you from blank page to scheduled social post in one
-conversation. This repo is a Claude Code plugin marketplace.
+Free, modular Claude skills designed for content creation, automated social media workflows, and strategic publishing. This repository functions as a Claude Code plugin marketplace.
 
 ## Install
 
